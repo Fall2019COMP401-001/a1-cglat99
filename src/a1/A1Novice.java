@@ -34,7 +34,7 @@ public class A1Novice {
 			String lastName = scan.next();
 			//Stores the names of customers into the array
 		 
-			customers[i] = firstName.charAt(0) + "." + lastName;
+			customers[i] = firstName.charAt(0) + ". " + lastName;
 			// System.out.println("Total Items Bought by the customer");
 			int numberOfItems = scan.nextInt();
 			
@@ -47,7 +47,7 @@ public class A1Novice {
 				}
 				//System.out.println("Amount of that specific item");
 				
-				// Builds out the array that is the size of the number of items bought for each customer, and each element of that array contains number of a specific item bought 
+				// Builds out the array that is the1 size of the number of items bought for each customer, and each element of that array contains number of a specific item bought 
 				numberBought[c] = scan.nextInt();
 				// System.out.println("Name of that item");
 				String nameOfItem = scan.next();
