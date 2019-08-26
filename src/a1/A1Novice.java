@@ -46,6 +46,7 @@ public class A1Novice {
 					price = 0;
 				}
 				//System.out.println("Amount of that specific item");
+				
 				// Builds out the array that is the size of the number of items bought for each customer, and each element of that array contains number of a specific item bought 
 				numberBought[c] = scan.nextInt();
 				// System.out.println("Name of that item");
@@ -54,7 +55,7 @@ public class A1Novice {
 				
 				// Accumulates the price of the items for that customer as it loops through the array of items bought for a customer
 				
-				price += scan.nextInt() * numberBought[c];
+				price += scan.nextDouble() * numberBought[c];
 			}
 			
 			// adds the price of that customer to a new price array
@@ -62,7 +63,7 @@ public class A1Novice {
 			}
 		//iterates through each customer and prints out their names and price paid
 		for (int a = 0; a < customers.length; a++) {
-			System.out.println(customers[a] + ":" + price);
+			System.out.println(customers[a] + ": " + price);
 		}
 		
 	}
