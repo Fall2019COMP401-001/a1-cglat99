@@ -1,6 +1,7 @@
 package a1;
 
 import java.util.Scanner;
+import java.text.DecimalFormat;
 
 public class A1Novice {
 
@@ -62,9 +63,11 @@ public class A1Novice {
 			prices[i] = price;
 			}
 		//iterates through each customer and prints out their names and price paid
+		DecimalFormat df = new DecimalFormat("##.##");
 		for (int a = 0; a < customers.length; a++) {
-			System.out.println(customers[a] + ": " + prices[a]);
+			System.out.println(customers[a] + ": " + String.format("%.2f", prices[a]));
 		}
+		
 		
 	}
 }
