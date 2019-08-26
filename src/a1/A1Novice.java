@@ -9,7 +9,7 @@ public class A1Novice {
 
 		// Read in count of numbers to process
 		
-		System.out.println("Number of customers");
+		//System.out.println("Number of customers");
 		int count = scan.nextInt();
 		
 		// Create array to store numbers
@@ -21,7 +21,7 @@ public class A1Novice {
 		
 		
 		// Initialize a price that will be adjusted later on
-		int price = 0;
+		 double price = 0;
 	
 		// read values into array
 		
@@ -47,7 +47,7 @@ public class A1Novice {
 				}
 				//System.out.println("Amount of that specific item");
 				
-				// Builds out the array that is the1 size of the number of items bought for each customer, and each element of that array contains number of a specific item bought 
+				// Builds out the array that is the size of the number of items bought for each customer, and each element of that array contains number of a specific item bought 
 				numberBought[c] = scan.nextInt();
 				// System.out.println("Name of that item");
 				String nameOfItem = scan.next();
@@ -55,7 +55,7 @@ public class A1Novice {
 				
 				// Accumulates the price of the items for that customer as it loops through the array of items bought for a customer
 				
-				price += scan.nextDouble() * numberBought[c];
+				price = price + scan.nextDouble() * numberBought[c];
 			}
 			
 			// adds the price of that customer to a new price array
@@ -63,7 +63,7 @@ public class A1Novice {
 			}
 		//iterates through each customer and prints out their names and price paid
 		for (int a = 0; a < customers.length; a++) {
-			System.out.println(customers[a] + ": " + price);
+			System.out.println(customers[a] + ": " + prices[a]);
 		}
 		
 	}
