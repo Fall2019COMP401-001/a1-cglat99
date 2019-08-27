@@ -23,7 +23,7 @@ public class A1Novice {
 		
 		// Initialize a price that will be adjusted later on
 		 double price = 0;
-	
+		 
 		// read values into array
 		
 		// Creates an array of customers
