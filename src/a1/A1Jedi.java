@@ -84,7 +84,7 @@ public class A1Jedi {
 			for (int i = 0; i < itemsBought; i++) {
 				newCounterVariable = 0;
 				while(newCounterVariable < itemsInStore.length) {
-					if(itemsBoughtByIndividual[i].equals(itemsInStore[newCounterVariable]) && !itemsBoughtByIndividual[i].equals(itemsBoughtByIndividual[i + 1])) {
+					if(i != itemsBoughtByIndividual.length && itemsBoughtByIndividual[i].equals(itemsInStore[newCounterVariable]) && !itemsBoughtByIndividual[i].equals(itemsBoughtByIndividual[i++])) {
 						customerCounter[newCounterVariable] ++;
 						newCounterVariable = itemsInStore.length; 
 						} else {
