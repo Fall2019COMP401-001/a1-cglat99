@@ -15,6 +15,7 @@ public class A1Jedi {
 		int counterVariable = 0;
 		int quantityBought = 0;
 		int itemsBoughtByCustomer = 0;
+		int customCounter = 0;
 		String nameOfItem = "";
 				
 		//initialize the price spent by each customer
@@ -67,7 +68,7 @@ public class A1Jedi {
 				while (counterVariable < itemsInStore.length) {
 				if (nameOfItem.equals(itemsInStore[counterVariable])) {
 					itemCounter[counterVariable] += quantityBought;
-					customerCounter[counterVariable] ++;	
+					customerCounter[counterVariable] += customCounter;
 					break;	
 				}
 				counterVariable++;
