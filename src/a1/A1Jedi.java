@@ -47,6 +47,7 @@ public class A1Jedi {
 				
 		// Make an array of customers
 		String[] arrayOfCustomers = new String [numberOfCustomers];
+		
 
 				
 		for (int n = 0; n < arrayOfCustomers.length; n++) {
@@ -58,25 +59,44 @@ public class A1Jedi {
 			arrayOfCustomers[n] = firstName + " " + lastName;
 		//	System.out.println("Number of items bought by that customer");
 			itemsBought = scan.nextInt();
+			String[] itemsBoughtByIndividual = new String[itemsBought];
 					
 			for (int a = 0; a < itemsBought; a++) {
+				
 				counterVariable = 0;
 			//	System.out.println("Quantity Bought");
 				quantityBought = scan.nextInt();
 				//System.out.println("Name of that item");
 				nameOfItem = scan.next();
+				itemsBoughtByIndividual[a] = nameOfItem;
 				while (counterVariable < itemsInStore.length) {
 				if (nameOfItem.equals(itemsInStore[counterVariable])) {
 					itemCounter[counterVariable] += quantityBought;
-					customerCounter[counterVariable] += 1;
-					break;	
-				}
+					continue;
+					
+					}
 				counterVariable++;
 				}
-						
-		
-			}	
-}
+				
+				}
+			counterVariable = 0;
+			Arrays.sort(itemsBoughtByIndividual);
+			for (int i = 0; i < itemsBought; i++) {
+				counterVariable = 0;
+				while(counterVariable < itemsInStore.length) {
+					if(itemsBoughtByIndividual[i].equals(itemsInStore[counterVariable]) && !itemsBoughtByIndividual[i].equals(itemsBoughtByIndividual[i + 1])) {
+						customerCounter[counterVariable] ++;
+						counterVariable = itemsInStore.length; 
+						} else {
+						counterVariable ++;
+					}
+				
+				}
+			}
+			
+			}
+			
+
 		for (int i = 0; i < itemCounter.length; i++) {
 			if(itemCounter[i] == 0) {
 				System.out.println("No customers bought" + " " + itemsInStore[i]);
@@ -87,6 +107,6 @@ public class A1Jedi {
 			
 		}
 		
-		
+		scan.close();
 	}
 }
