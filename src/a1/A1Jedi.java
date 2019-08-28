@@ -72,23 +72,23 @@ public class A1Jedi {
 				while (counterVariable < itemsInStore.length) {
 				if (nameOfItem.equals(itemsInStore[counterVariable])) {
 					itemCounter[counterVariable] += quantityBought;
-					continue;
+					counterVariable = itemsInStore.length;
 					
 					}
 				counterVariable++;
 				}
 				
 				}
-			counterVariable = 0;
+			int newCounterVariable = 0;
 			Arrays.sort(itemsBoughtByIndividual);
 			for (int i = 0; i < itemsBought; i++) {
-				counterVariable = 0;
-				while(counterVariable < itemsInStore.length) {
-					if(itemsBoughtByIndividual[i].equals(itemsInStore[counterVariable]) && !itemsBoughtByIndividual[i].equals(itemsBoughtByIndividual[i + 1])) {
-						customerCounter[counterVariable] ++;
-						counterVariable = itemsInStore.length; 
+				newCounterVariable = 0;
+				while(newCounterVariable < itemsInStore.length) {
+					if(itemsBoughtByIndividual[i].equals(itemsInStore[newCounterVariable]) && !itemsBoughtByIndividual[i].equals(itemsBoughtByIndividual[i + 1])) {
+						customerCounter[newCounterVariable] ++;
+						newCounterVariable = itemsInStore.length; 
 						} else {
-						counterVariable ++;
+						newCounterVariable ++;
 					}
 				
 				}
