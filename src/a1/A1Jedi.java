@@ -68,7 +68,7 @@ public class A1Jedi {
 				while (counterVariable < itemsInStore.length) {
 				if (nameOfItem.equals(itemsInStore[counterVariable])) {
 					itemCounter[counterVariable] += quantityBought;
-					customerCounter[counterVariable] += customCounter;
+					customerCounter[counterVariable] += 1;
 					break;	
 				}
 				counterVariable++;
